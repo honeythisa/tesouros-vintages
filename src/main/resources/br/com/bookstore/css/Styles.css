@@ -18,3 +18,7 @@
 .mouse-moved:hover{
     -fx-background-color: #E4E4E4;
 }
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box, rgb(0,0,0,0.1), 10, 0, 0, 10);
+}

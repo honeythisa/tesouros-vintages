@@ -10,12 +10,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.bookstore.Controller">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@css/Styles.css" BorderPane.alignment="CENTER">
          <children>
@@ -204,16 +206,30 @@
       </VBox>
    </left>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="6.0" prefWidth="238.0" text="Recently Added">
+            <Label prefHeight="27.0" prefWidth="282.0" text="Adicionados Recentemente">
                <font>
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
             </Label>
             <ScrollPane prefHeight="250.0" prefWidth="200.0" styleClass="transparent" stylesheets="@css/Styles.css">
                <content>
-                  <HBox fx:id="cardLayoout" prefHeight="234.0" prefWidth="1076.0" styleClass="transparent" stylesheets="@css/Styles.css" />
+                  <HBox fx:id="cardLayoout" alignment="CENTER_LEFT" prefHeight="234.0" prefWidth="1048.0" spacing="20.0" styleClass="transparent" stylesheets="@css/Styles.css" />
+               </content>
+            </ScrollPane>
+            <Label prefHeight="10.0" prefWidth="282.0" text="Recomendados para você">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+            </Label>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@css/Styles.css" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="bookContainer" prefHeight="0.0" prefWidth="0.0">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
                </content>
             </ScrollPane>
          </children>
