@@ -25,7 +25,7 @@
                <Image url="@img/logo.png" />
             </ImageView>
             <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" />
-            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="290.0" styleClass="round-layout" stylesheets="css/Styles.css">
+            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="290.0" styleClass="round-layout" stylesheets="@css/Styles.css">
                <children>
                   <TextField prefHeight="26.0" prefWidth="246.0" promptText="Search " styleClass="transparent" stylesheets="@css/Styles.css" />
                   <ImageView fx:id="searchImageView" fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
