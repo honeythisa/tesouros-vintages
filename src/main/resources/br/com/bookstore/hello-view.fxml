@@ -34,9 +34,9 @@
                </children>
             </HBox>
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="200.0">
                <children>
-                  <Label prefHeight="54.0" prefWidth="197.0" text="user">
+                  <Label prefHeight="54.0" prefWidth="96.0" text="Olá, usuário">
                      <font>
                         <Font name="Berlin Sans FB Demi Bold" size="16.0" />
                      </font>
@@ -46,6 +46,11 @@
                   </ImageView>
                </children>
             </HBox>
+            <Button mnemonicParsing="false" onAction="#onVenderButtonClick" prefHeight="30.0" prefWidth="119.0" style="-fx-background-color: #12B9B9;" text="Vender" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="16.0" />
+               </font>
+            </Button>
          </children>
          <padding>
             <Insets left="20.0" right="20.0" />
@@ -206,7 +211,7 @@
       </VBox>
    </left>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="835.0" prefWidth="1097.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <Label prefHeight="27.0" prefWidth="282.0" text="Adicionados Recentemente">
                <font>
@@ -223,7 +228,7 @@
                   <Font name="Berlin Sans FB" size="24.0" />
                </font>
             </Label>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0" styleClass="transparent" stylesheets="@css/Styles.css" VBox.vgrow="ALWAYS">
+            <ScrollPane prefHeight="469.0" prefWidth="1057.0" styleClass="transparent" stylesheets="@css/Styles.css" VBox.vgrow="ALWAYS">
                <content>
                   <GridPane fx:id="bookContainer" prefHeight="0.0" prefWidth="0.0">
                     <rowConstraints>

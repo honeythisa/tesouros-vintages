@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 public class Controller implements Initializable {
     @FXML
     private HBox cardLayoout;
@@ -23,6 +27,21 @@ public class Controller implements Initializable {
     private GridPane bookContainer;
     private List<Book> recentlyAdded;
     private List<Book> recommended;
+
+    @FXML
+    private void onVenderButtonClick() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/br/com/bookstore/cadastro_funcionarios.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Cadastre-se para vender");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
